@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    <title>Dev Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <!-- icons cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"></link>
+    <!-- font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="main.css"></link>
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-bold bg-[#f6f8ff] w-[100vw] h-[100vh] text-[#2b3442] pt-[2em] pb-[2em] flex flex-col justify-right items-center gap-[1em]">
+
+    <h1 class="text-[#0079ff] w-[100%] text-center text-[2em]">Dev<span class="text-[#2b3442]">Finder</span></h1>
+    <form onsubmit="getDev(event)" class="flex justify-center items-center p-[0.5em] gap-[1em] w-[90%]">
+        <input required type="search" id="userInput" placeholder="Github UserName..." class="bg-[#fefefe] h-[4em] p-[0.5em] w-[100%] border border-[0px] rounded rounded-[10px] text-[#2b3442]">
+        <button type="submit" class="bg-[#0079ff] text-[#fefefe] p-[0.5em] w-[7em] h-[4em] rounded rounded-[10px] border border-[0px] flex justify-center items-center"><h2>Search</h2></button>
+    </form>
+    <h1 class="ins text-[1.5em] text-[#2b3442] text-[center] w-[100%] h-[100%] flex justify-center flex-col items-center">Get Started By <span class="text-[#0079ff]">Searching...</span></h1>
+    <h1 class="err hidden text-[1.5em] text-[#2b3442] text-[center] w-[100%] h-[100%] flex justify-center flex-col items-center">Oops...<span class="text-[#0079ff]">Username Not Found</span></h1>
+    <div class="result hidden w-[70%] h-[fit-content] p-[1em] flex flex-col justify-right items-center gap-[1em] bg-[#fefefe] rounded rounded-[10px]">
+        <div class="flex w-[100%] h-[fit-content] justify-between items center gap-[1em]">
+            <img src="" alt="Image" id="image2" class="w-[10em] h-[10em] self-start rounded rounded-[500px] border border-[2px] border-[white]">
+            <div class="w-[100%] h-[fit-content] flex flex-col justify-center items-start gap-[1em]">
+                <img src="" alt="Image" id="image1" class="w-[10em] h-[10em] self-start rounded rounded-[500px] border border-[2px] border-[white]">
+                <div class="name flex justify-between items-center w-[100%] h-[fit-content]">
+                    <h2 id="name" class="text-[#2b3442] text-[1.5em]"></h2>
+                    <p id="date" class="text-[#54729f]"></p>
+                </div>
+                <p id="username" class="text-[#0079ff]"></p>
+                <p id="bio" class="text-[#54729f] text-left w-[100%]"></p>
+                <div class="info w-[100%] flex justify-between items-center gap-[1em] bg-[#f6f8ff] p-[1em] rounded rounded-[10px]">
+                    <div class="flex flex-col justify-center items-center">
+                        <p class="text-[#54729f] text-[0.7em]">Repos</p>
+                        <p id="repo" class="text-[#2b3442]"></p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                        <p class="text-[#54729f] text-[0.7em]">Followers</p>
+                        <p id="followers" class="text-[#2b3442]"></p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                        <p class="text-[#54729f] text-[0.7em]">Following</p>
+                        <p id="following" class="text-[#2b3442]"></p>
+                    </div>
+                </div>
+                <div class="flex justify-left items-center flex-wrap gap-[1em] h-[fit-content] w-[100%]">
+                    <p class="bi bi-geo-alt-fill text-[#54729f]"><span id="location"></span></p>
+                    <p class="bi bi-twitter text-[#54729f]"><span id="twitter"></span></p>
+                    <p class="bi bi-link-45deg text-[#54729f]"><span id="url"></span></p>
+                    <p class="bi bi-buildings-fill text-[#54729f]"><span id="company"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.js"></script>
+    <!-- moment js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- javascript -->
+    <script src="./main.js"></script>
+</body>
+
+</html>

@@ -7,6 +7,13 @@
 }
 
 
+/* responsive work */
+
+#image1 {
+    display: none;
+}
+
+
 /* scroll bars */
 
 ::-moz-scrollbar {
@@ -73,4 +80,35 @@ form>*:hover {
 
 div:where(.swal2-container) div:where(.swal2-loader) {
     border-color: #232323 #fff!important;
+}
+
+
+/* media queries */
+
+@media only screen and (max-width: 800px) {
+    .name {
+        flex-direction: column;
+        align-items: start!important;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #image1 {
+        display: block;
+    }
+    #image2 {
+        display: none;
+    }
+}
+
+@media only screen and(max-width:470px) {
+    .result {
+        width: 80%!important;
+    }
+}
+
+@media only screen and(max-width:400px) {
+    .result {
+        width: 90%!important;
+    }
 }
