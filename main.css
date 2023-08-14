@@ -1,0 +1,76 @@
+/* all elements */
+
+* {
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+    outline: none;
+}
+
+
+/* scroll bars */
+
+::-moz-scrollbar {
+    height: 6px;
+    width: 6px;
+    border-radius: 10px;
+    background-color: #23232300;
+}
+
+::-moz-scrollbar-track {
+    border-radius: 10px;
+    background-color: #23232300;
+    /* border: 1px solid #e4e4e4; */
+}
+
+::-moz-scrollbar-thumb {
+    background-color: #0079ff;
+    border-radius: 10px;
+    /* border: 2px solid #2323230000; */
+}
+
+::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+    border-radius: 10px;
+    background-color: #23232300;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #23232300;
+    /* border: 1px solid #e4e4e4; */
+}
+
+::-webkit-scrollbar-thumb {
+    /* -webkit-box-shadow: inset 0 0 6px #212121; */
+    border-radius: 10px;
+    background-color: #0079ff;
+    /* border: 2px solid #23232300; */
+}
+
+
+/* pseudo elements */
+
+form>*:focus,
+form>*:active,
+form>*:hover {
+    box-shadow: 0 0 4px #e4e4e4;
+}
+
+
+/* sweet alert */
+
+.swal2-confirm:focus,
+.swal2-deny:focus,
+.swal2-cancel:focus,
+.swal2-input:focus {
+    box-shadow: 0 0 4px #232323 !important;
+}
+
+.swal2-input {
+    border: 0px solid #232323 !important;
+}
+
+div:where(.swal2-container) div:where(.swal2-loader) {
+    border-color: #232323 #fff!important;
+}
