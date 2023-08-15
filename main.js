@@ -47,18 +47,18 @@ function getDev(event) {
             gitProfileImage1.src = response.data.avatar_url
             gitProfileImage2.src = response.data.avatar_url
             gitDate.innerHTML = "Joined " + theDate
-            if (!gitBio.innerHTML) {
-                gitBio.innerHTML = "No Bio"
+            if (!response.data.bio) {
+                gitBio.innerHTML = " No Bio"
             }
             if (!response.data.twitter_username) {
-                gitTwitter.innerHTML = "Not Available"
+                gitTwitter.innerHTML = " Not Available"
                 gitTwitter.href = "#"
             }
-            if (!gitLocation.innerHTML) {
-                gitLocation.innerHTML = "Not Available"
+            if (!response.data.location) {
+                gitLocation.innerHTML = " Not Available"
             }
-            if (!gitCompany.innerHTML) {
-                gitCompany.innerHTML = "Not Available"
+            if (!response.data.company) {
+                gitCompany.innerHTML = " Not Available"
             }
         })
         .catch(function(error) {
